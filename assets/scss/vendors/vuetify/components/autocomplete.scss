@@ -1,0 +1,9 @@
+.v-application .v-autocomplete.v-text-field.v-text-field--outlined {
+    &:not(.v-text-field--placeholder) {
+        .v-select__slot {
+            input {
+                margin-top: 18px;
+            }
+        }
+    }
+}

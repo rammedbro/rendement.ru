@@ -1,0 +1,56 @@
+.v-application .v-list {
+    padding: 0;
+
+    &--nav {
+        .v-list-item {
+            padding: 0;
+        }
+    }
+}
+
+.v-application .v-list-item {
+    min-height: auto;
+    font-weight: 500;
+    padding: 16px;
+
+    &__avatar,
+    &__action {
+        align-self: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__content {
+        align-self: normal;
+        padding: 0;
+    }
+
+    &__icon {
+        margin: 0;
+
+        &:first-child {
+            margin-right: 16px !important;
+        }
+    }
+}
+
+.v-application {
+    @include theme('v-list-item') using($material) {
+        &--link {
+            &:before {
+                background: map-deep-get($material, 'colors', 'primary');
+            }
+        }
+
+        &.theme--light:not(.v-list-item--disabled) {
+            &:not(.v-list-item--active):hover,
+            &.v-list-item--active {
+                color: map-deep-get($material, 'colors', 'primary') !important;
+
+                .v-icon {
+                    color: map-deep-get($material, 'colors', 'primary');
+                }
+            }
+        }
+    }
+}

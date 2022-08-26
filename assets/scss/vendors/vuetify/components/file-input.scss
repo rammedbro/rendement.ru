@@ -1,0 +1,13 @@
+.v-application .v-file-input {
+    &.v-text-field--outlined {
+        .v-text-field__slot {
+            padding: 0;
+        }
+
+        .v-file-input__text {
+            min-height: 32px;
+            padding-top: 18px;
+            padding-bottom: 6px;
+        }
+    }
+}

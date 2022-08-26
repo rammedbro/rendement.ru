@@ -1,0 +1,18 @@
+.v-application .v-app-bar {
+    &.v-app-bar--fixed {
+        z-index: 10;
+    }
+
+    .v-toolbar__content {
+        padding: 0;
+    }
+}
+
+.v-application .v-footer {
+    flex-direction: column;
+    align-items: normal;
+
+    &.theme--dark {
+        color: #646f7f;
+    }
+}

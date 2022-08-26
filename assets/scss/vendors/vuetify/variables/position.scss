@@ -1,0 +1,8 @@
+@if ($utility-position-enable) {
+    $utilities: map-merge($utilities, (
+        "position": (
+            property: position,
+            values: static relative absolute fixed sticky,
+        ),
+    ));
+}

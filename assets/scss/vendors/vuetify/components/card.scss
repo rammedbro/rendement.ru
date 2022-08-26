@@ -1,0 +1,7 @@
+.v-application .v-card {
+    overflow: hidden;
+
+    &--hover:hover {
+        @include elevation($card-hover-elevation);
+    }
+}

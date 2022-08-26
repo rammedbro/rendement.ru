@@ -1,0 +1,12 @@
+.v-application .v-select.v-text-field.v-text-field--outlined {
+    &:not(.v-text-field--placeholder) {
+        .v-select__selections {
+            margin-top: 18px;
+            padding: 0;
+        }
+    }
+
+    input {
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,26 @@
+image: node:14.16.1
+
+pipelines:
+  branches:
+    master:
+      - step:
+          deployment: production
+          name: Deploy to production
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+            - scp -r ./.nuxt $USER@$HOST:$SITE_ROOT
+            - ssh -T $USER@$HOST 'bash -s' < ./deploy.sh $SITE_ROOT $PM2_PROCESS
+    develop:
+      - step:
+          deployment: devaid
+          name: Deploy to devaid
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+            - scp -r ./.nuxt $USER@$HOST:$SITE_ROOT
+            - ssh -T $USER@$HOST 'bash -s' < ./deploy.sh $SITE_ROOT $PM2_PROCESS

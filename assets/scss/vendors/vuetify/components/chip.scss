@@ -1,0 +1,43 @@
+.v-application .theme--light.v-chip {
+    font-weight: 500;
+    color: map_get($blue, 'lighten-2');
+    border: 1px solid map_get($blue, 'lighten-4');
+
+    &:not(.v-chip--active) {
+        background: map-get($shades, 'white');
+    }
+
+    &__close {
+        color: map_get($blue, 'lighten-3');
+    }
+
+    &:hover {
+        &:before {
+            background: map-get($shades, 'black');
+            opacity: .04;
+        }
+    }
+
+    &:active {
+        &:before {
+            opacity: .12;
+        }
+    }
+
+    &--disabled {
+        color: map_get($grey, 'lighten-2');
+        border-color: map_get($grey, 'lighten-3');
+
+        .v-chip__close {
+            color: map_get($grey, 'lighten-3');
+        }
+    }
+}
+
+.v-application {
+    @include theme('v-ship') using($material) {
+        &:active:before {
+            background: map-deep-get($material, 'colors', 'primary');
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.l-radio {
+    &.l-radio--unstyled {
+        margin: 0 !important;
+
+        .v-input__control,
+        .v-label {
+            width: 100%;
+        }
+
+        .v-input--selection-controls__input {
+            display: none;
+        }
+    }
+}
+
+@include theme('l-radio') using($material) {
+    &.l-radio--unstyled {
+        &:hover {
+            background: rgba(map-deep-get($material, 'colors', 'primary'), .08);
+        }
+
+        &.v-item--active {
+            background: rgba(map-deep-get($material, 'colors', 'primary'), .12);
+        }
+    }
+}

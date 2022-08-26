@@ -1,0 +1,25 @@
+.v-application .v-input {
+    font-size: 14px;
+    font-weight: 500;
+
+    .v-messages {
+        min-height: 16px;
+        font-size: 11px;
+    }
+
+    &__control {
+        & > .v-messages {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.v-application {
+    @include theme('v-input') using($material) {
+        &.warning--text {
+            .v-label, .v-icon, .v-messages {
+                color: map-deep-get($material, 'colors', 'warning') !important;
+            }
+        }
+    }
+}

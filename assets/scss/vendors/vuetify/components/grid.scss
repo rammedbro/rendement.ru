@@ -1,0 +1,55 @@
+$xsGutter: map_get($grid-gutters, 'xs');
+
+.row {
+    margin: -$xsGutter / 2;
+}
+
+@each $media in map_keys($grid-breakpoints) {
+    $container-padding-x: map_get($container-paddings-x, $media);
+    $container-padding-y: map_get($container-paddings-y, $media);
+
+    @include media-breakpoint-up($media) {
+        .container {
+            @if ($container-padding-x != null) {
+                padding-right: $container-padding-x;
+                padding-left: $container-padding-x;
+            }
+
+            @if ($container-padding-y != null) {
+                padding-top: $container-padding-y;
+                padding-bottom: $container-padding-y;
+            }
+        }
+    }
+
+    $gutter: map_get($grid-gutters, $media);
+
+    @if ($media != 'xs' and $gutter != null) {
+        @include media-breakpoint-up($media) {
+            .row {
+                margin: -$gutter / 2;
+            }
+
+            .col, [class*="col-"] {
+                padding: $gutter / 2;
+            }
+        }
+    }
+}
+
+.container--dense {
+    padding: $xsGutter;
+}
+
+.row--dense {
+    margin: -$xsGutter / 4;
+
+    & > .col,
+    & > [class^="col-"] {
+        padding: $xsGutter / 4;
+    }
+}
+
+.no-gutters {
+    margin: 0;
+}

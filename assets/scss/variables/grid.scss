@@ -1,0 +1,61 @@
+/* Grid */
+$grid-breakpoints: (
+    'xs': 0,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1440px
+);
+
+$grid-gutter: $spacer * 4;
+$form-grid-gutter: $spacer * 2;
+$grid-columns: 12;
+
+$container-padding-x: $grid-gutter;
+
+$container-max-widths: (
+    'xs': 1174px,
+    'md': null,
+    'lg': null,
+    'xl': null
+);
+
+$container-paddings-y: (
+    'xs': $grid-gutter * 2,
+    'sm': null,
+    'md': null,
+    'lg': $grid-gutter * 2,
+    'xl': null
+);
+
+$container-paddings-x: (
+    'xs': $grid-gutter,
+    'sm': null,
+    'md': null,
+    'lg': $grid-gutter * 2,
+    'xl': null
+);
+
+$grid-gutters: (
+    'xs': $grid-gutter,
+    'sm': null,
+    'md': null,
+    'lg': $grid-gutter * 2,
+    'xl': null
+);
+
+$display-breakpoints: (
+    'print-only': 'only print',
+    'screen-only': 'only screen',
+    'xs-only': 'only screen and (max-width: #{map-get($grid-breakpoints, 'sm') - 1})',
+    'sm-only': 'only screen and (min-width: #{map-get($grid-breakpoints, 'sm')}) and (max-width: #{map-get($grid-breakpoints, 'md') - 1})',
+    'sm-and-down': 'only screen and (max-width: #{map-get($grid-breakpoints, 'md') - 1})',
+    'sm-and-up': 'only screen and (min-width: #{map-get($grid-breakpoints, 'sm')})',
+    'md-only': 'only screen and (min-width: #{map-get($grid-breakpoints, 'md')}) and (max-width: #{map-get($grid-breakpoints, 'lg') - 1})',
+    'md-and-down': 'only screen and (max-width: #{map-get($grid-breakpoints, 'lg') - 1})',
+    'md-and-up': 'only screen and (min-width: #{map-get($grid-breakpoints, 'md')})',
+    'lg-only': 'only screen and (min-width: #{map-get($grid-breakpoints, 'lg')}) and (max-width: #{map-get($grid-breakpoints, 'xl') - 1})',
+    'lg-and-down': 'only screen and (max-width: #{map-get($grid-breakpoints, 'xl') - 1})',
+    'lg-and-up': 'only screen and (min-width: #{map-get($grid-breakpoints, 'lg')})',
+    'xl-only': 'only screen and (min-width: #{map-get($grid-breakpoints, 'xl')})'
+);

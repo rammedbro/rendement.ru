@@ -1,0 +1,59 @@
+/* Box shadow */
+$shadow-key-umbra-opacity: rgba(195, 196, 198, .2);
+$shadow-key-penumbra-opacity: rgba(195, 196, 198, .14);
+$shadow-key-ambient-opacity: rgba(195, 196, 198, .12);
+
+$shadow-key-umbra: (
+    0: (0px 0px 0px 0px $shadow-key-umbra-opacity),
+    1: (0px 1px 3px 0px $shadow-key-umbra-opacity),
+    2: (0px 1px 5px 0px $shadow-key-umbra-opacity),
+    3: (0px 1px 8px 0px $shadow-key-umbra-opacity),
+    4: (0px 1px 10px 0px $shadow-key-umbra-opacity),
+    6: (0px 3px 5px 0px $shadow-key-umbra-opacity),
+    8: (0px 4px 5px 0px $shadow-key-umbra-opacity),
+    9: (0px 5px 6px 0px $shadow-key-umbra-opacity),
+    12: (0px 7px 8px 0px $shadow-key-umbra-opacity),
+    16: (0px 8px 10px 0px $shadow-key-umbra-opacity),
+    24: (0px 11px 15px 0px $shadow-key-umbra-opacity)
+);
+
+$shadow-key-penumbra: (
+    0: (0px 0px 0px 0px $shadow-key-penumbra-opacity),
+    1: (0px 2px 2px 0px $shadow-key-penumbra-opacity),
+    2: (0px 3px 4px 0px $shadow-key-penumbra-opacity),
+    3: (0px 3px 4px 0px $shadow-key-penumbra-opacity),
+    4: (0px 4px 5px 0px $shadow-key-penumbra-opacity),
+    6: (0px 1px 18px 0px $shadow-key-penumbra-opacity),
+    8: (0px 3px 14px 0px $shadow-key-penumbra-opacity),
+    9: (0px 3px 16px 0px $shadow-key-penumbra-opacity),
+    12: (0px 5px 22px 0px $shadow-key-penumbra-opacity),
+    16: (0px 6px 30px 0px $shadow-key-penumbra-opacity),
+    24: (0px 9px 46px 0px $shadow-key-penumbra-opacity)
+);
+
+$shadow-key-ambient: (
+    0: (0px 0px 0px 0px $shadow-key-ambient-opacity),
+    1: (0px 0px 2px 0px $shadow-key-ambient-opacity),
+    2: (0px 2px 4px 0px $shadow-key-ambient-opacity),
+    3: (0px 3px 3px 0px $shadow-key-ambient-opacity),
+    4: (0px 2px 4px 0px $shadow-key-ambient-opacity),
+    6: (0px 6px 10px 0px $shadow-key-ambient-opacity),
+    8: (0px 8px 10px 0px $shadow-key-ambient-opacity),
+    9: (0px 9px 12px 0px $shadow-key-ambient-opacity),
+    12: (0px 12px 17px 0px $shadow-key-ambient-opacity),
+    16: (0px 16px 24px 0px $shadow-key-ambient-opacity),
+    24: (0px 24px 38px 0px $shadow-key-ambient-opacity)
+);
+
+/* Drop shadow */
+$ds-shadow-key-umbra: (
+    24: (0px 9px 46px $shadow-key-ambient-opacity)
+);
+
+$ds-shadow-key-penumbra: (
+    24: (0px 11px 15px $shadow-key-umbra-opacity)
+);
+
+$ds-shadow-key-ambient: (
+    24: (0px 24px 38px $shadow-key-penumbra-opacity)
+);

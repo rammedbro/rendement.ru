@@ -1,0 +1,7 @@
+.v-application .v-avatar {
+    background: map_get($grey, 'lighten-4');
+
+    img {
+        object-fit: cover;
+    }
+}

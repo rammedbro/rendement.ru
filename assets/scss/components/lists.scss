@@ -1,0 +1,30 @@
+.v-application .v-application--wrap ul,
+.v-application .v-application--wrap ol {
+    padding-left: 0;
+}
+
+.l-list {
+    &--horizontal {
+        display: flex !important;
+        align-items: center;
+
+        .v-list-item {
+            flex: 0 0 auto;
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.step-number {
+    @include heading('h5');
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px auto;
+    color: map_get($light-blue, 'lighten-3');
+    border: 3px solid map_get($light-blue, 'lighten-3');
+    border-radius: 50%;
+}

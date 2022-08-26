@@ -1,0 +1,59 @@
+@import "~vuetify/src/styles/settings/colors";
+
+$red: (
+    'base': #fb4e4e,
+    'lighten-1': #ff6262,
+    'lighten-5': #ffeaea,
+    'darken-1': #e93c3c
+);
+
+$light-blue: (
+    'base': #2686d8,
+    'lighten-5': #e0eef9,
+    'lighten-4': #b3d4f1,
+    'lighten-3': #80b8e8,
+    'lighten-2': #4d9cdf,
+    'lighten-1': #0071d1,
+    'darken-1': #0069cc,
+    'darken-2': #005ec6,
+    'darken-3': #0054c0
+);
+
+$green: (
+    'base': #2ac769,
+    'lighten-1': #40dd7f,
+    'darken-1': #1ab759
+);
+
+$orange: (
+    'base': #f6a609,
+    'lighten-1': #ffbc1f,
+    'lighten-4': #ffefc9,
+    'lighten-5': #fef4e1,
+    'darken-1': #e89806,
+);
+
+$grey: (
+    'base': #9e9e9e,
+    'lighten-5': #f9f9fa,
+    'lighten-4': #e8e8e8,
+    'lighten-3': #dbdde0,
+    'lighten-2': #cacccf,
+    'lighten-1': #a0a4a8,
+    'darken-1': #52575c
+);
+
+$shades: (
+    'black': #1e3146,
+    'white': #ffffff,
+    'transparent': transparent
+);
+
+$colors: (
+    'red': $red,
+    'light-blue': $light-blue,
+    'green': $green,
+    'orange': $orange,
+    'grey': $grey,
+    'shades': $shades,
+);

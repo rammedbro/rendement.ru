@@ -1,0 +1,127 @@
+.v-application .v-text-field {
+    &.v-input--has-state,
+    &.v-input--is-focused {
+        .v-icon {
+            color: inherit;
+        }
+    }
+}
+
+.v-application .v-text-field.v-text-field--enclosed {
+    .v-input__prepend-inner {
+        padding-right: 16px;
+    }
+
+    .v-input__append-inner {
+        align-self: center;
+        margin-top: 0;
+        padding-left: 16px;
+    }
+
+    &:not(.v-text-field--rounded) > .v-input__control > .v-input__slot {
+        padding: 0 16px;
+    }
+
+    .v-text-field__details {
+        padding: 0;
+    }
+}
+
+.v-application .v-text-field.v-text-field--outlined {
+    .v-label {
+        left: 0 !important;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        color: map_get($grey, 'lighten-1');
+
+        &--active {
+            color: map_get($grey, 'darken-1');
+            transform: translateY(-10px) scale(.75);
+        }
+    }
+
+    .v-input__slot {
+        fieldset {
+            top: 0;
+            border-width: 1px;
+
+            legend {
+                display: none;
+            }
+        }
+    }
+
+
+    .v-text-field__slot {
+        input, textarea {
+            font-weight: 500;
+        }
+
+        input {
+            margin-top: 18px;
+        }
+    }
+
+    &:not(.v-text-field--placeholder) {
+        .v-text-field__slot {
+            input, textarea {
+                margin-top: 18px;
+            }
+        }
+    }
+
+    &:not(.v-input--is-focused, .v-input--has-state, .warning--text) {
+        .v-input__slot {
+            fieldset {
+                border-color: map_get($grey, 'lighten-2');
+            }
+
+            &:hover {
+                fieldset {
+                    border-color: map_get($grey, 'lighten-1') !important;
+                }
+
+                .v-label {
+                    color: map_get($grey, 'darken-1');
+                }
+
+                .v-icon {
+                    color: map_get($grey, 'lighten-1');
+                }
+            }
+        }
+    }
+
+    &.v-input--is-focused {
+        .v-input__slot {
+            background: map_get($grey, 'lighten-5');
+        }
+    }
+}
+
+.v-application .v-textarea.v-text-field--outlined {
+    textarea {
+        margin-bottom: 8px;
+    }
+
+    &.v-text-field--placeholder {
+        textarea {
+            margin-top: 16px !important;
+        }
+
+        label + textarea {
+            margin-top: 24px !important;
+        }
+    }
+}
+
+.v-application {
+    @include theme('v-text-field.v-text-field--outlined') using($material) {
+        &.warning--text {
+            fieldset {
+                border-color: map-deep-get($material, 'colors', 'warning') !important;
+            }
+        }
+    }
+}

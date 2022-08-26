@@ -1,0 +1,40 @@
+.v-application .v-input.v-input--selection-controls {
+    margin-top: 0;
+    padding-top: 0;
+
+    .v-label {
+        min-height: 24px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .v-messages {
+        margin-bottom: 8px;
+    }
+}
+
+.v-application .v-input.v-input--radio-group {
+    .v-radio {
+        align-items: flex-start;
+        margin-right: 0;
+
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+}
+
+.v-application .v-input.v-input--checkbox {
+    .v-input__slot {
+        align-items: flex-start;
+    }
+
+    &.l-checkbox--small {
+        .v-label {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16px;
+            color: map_get($grey, 'darken-1');
+        }
+    }
+}

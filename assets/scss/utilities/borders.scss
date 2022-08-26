@@ -1,0 +1,17 @@
+@if ($utility-borders-enable) {
+    .l-border {
+        border: 0 solid;
+    }
+
+    @include theme('v-application') using($material) {
+        .l-border {
+            border-color: map-get($material, 'dividers');
+        }
+    }
+
+    body .v-application {
+        .l-border {
+            background-color: transparent !important;
+        }
+    }
+}

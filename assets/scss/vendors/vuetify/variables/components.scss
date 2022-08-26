@@ -1,0 +1,63 @@
+/* Buttons */
+$btn-letter-spacing: .2px;
+$btn-text-transform: none;
+$btn-font-weight: 600;
+$btn-sizes: (
+    'x-small': 32,
+    'small': 44,
+    'default': 56
+);
+$btn-font-sizes: (
+    'x-small': .75rem,
+    'small': .75rem,
+    'default': .875rem,
+);
+$btn-hover-opacity: .08;
+
+/* Breadcrumbs */
+$breadcrumbs-padding: 0;
+
+/* Inputs */
+$input-font-size: 14px;
+
+/* Tooltips */
+$tooltip-font-size: 12px;
+
+/* Slider */
+$slider-thumb-size: 16px;
+
+/* Cards */
+$card-elevation: 1;
+$card-hover-elevation: 24;
+
+/* Pagination */
+$pagination-navigation-width: 40px;
+$pagination-navigation-height: 40px;
+$pagination-navigation-margin: 0;
+$pagination-more-width: 40px;
+$pagination-more-height: 40px;
+$pagination-more-margin: 0 8px;
+$pagination-item-min-width: 40px;
+$pagination-item-height: 40px;
+$pagination-item-margin: 0 8px;
+$pagination-item-padding: 0;
+
+/* Tabs */
+$tab-font-size: 14px;
+$tab-font-weight: 600;
+
+/* Footer */
+$footer-padding: 0;
+
+/* Expansion panels */
+$expansion-panel-header-padding: 16px;
+$expansion-panel-content-padding: 16px;
+
+/* Badge */
+$badge-wrapper-margin: 0 8px;
+
+/* Data tables */
+$data-table-regular-header-font-size: 16px;
+
+/* Textarea */
+$textarea-line-height: $line-height-root;

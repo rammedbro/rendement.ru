@@ -1,0 +1,18 @@
+.filter.filter--adaptive {
+    @include media-breakpoint-down(md) {
+        display: flex;
+        align-content: stretch;
+        height: 100%;
+
+        .filter {
+            &__body {
+                flex-flow: column nowrap;
+                height: 100%;
+            }
+
+            &__field, &__btn {
+                flex: 0;
+            }
+        }
+    }
+}

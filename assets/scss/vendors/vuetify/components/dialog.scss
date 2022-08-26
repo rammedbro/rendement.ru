@@ -1,0 +1,5 @@
+.v-application .v-dialog {
+    &:not(.v-dialog--fullscreen) {
+        margin: $grid-gutter;
+    }
+}

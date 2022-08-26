@@ -1,0 +1,30 @@
+.l-input.l-input--outlined {
+    .v-input__slot {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid map_get($grey, 'lighten-4');
+        border-radius: $border-radius-root;
+    }
+
+    .v-messages {
+        padding: 0 16px;
+    }
+}
+
+@include theme('l-input') using($material) {
+    &.l-input--outlined {
+        &.error--text {
+            .v-input__slot {
+                border-color: map-deep-get($material, 'colors', 'error');
+            }
+        }
+    }
+}
+
+.l-input-chips {
+    margin-bottom: 32px;
+
+    &__chips {
+        margin-top: 24px;
+    }
+}

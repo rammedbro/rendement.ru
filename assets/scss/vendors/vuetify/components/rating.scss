@@ -1,0 +1,22 @@
+.v-application .v-rating {
+    &:not(.v-rating--dense) {
+        margin: -4px;
+
+        .v-icon {
+            font-size: 18px;
+            padding: 4px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    &--dense {
+        margin: -2px;
+
+        .v-icon {
+            padding: 2px;
+        }
+    }
+}

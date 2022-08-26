@@ -1,0 +1,20 @@
+.pointer {
+    cursor: pointer;
+}
+
+.postfix {
+    &--rubles:after {
+        content: ' руб.';
+    }
+}
+
+.text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bg-noise {
+    background-image: url('/images/noise-texture.png');
+    background-repeat: repeat;
+}

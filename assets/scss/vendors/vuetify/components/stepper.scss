@@ -1,0 +1,22 @@
+.v-application .v-stepper {
+    box-shadow: none;
+
+    &__content {
+        padding: 0;
+    }
+
+    &.fill-height {
+        height: 100%;
+
+        .v-stepper {
+            &__items {
+                display: flex;
+                height: 100%;
+            }
+
+            &__wrapper {
+                height: 100%;
+            }
+        }
+    }
+}

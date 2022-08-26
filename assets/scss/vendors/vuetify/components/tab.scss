@@ -1,0 +1,83 @@
+.v-application .v-tabs {
+    .v-tabs-bar {
+        background: transparent !important;
+    }
+
+    .v-tabs-bar--is-mobile:not(.v-tabs-bar--show-arrows) {
+        .v-slide-group__prev--disabled {
+            display: none !important;
+        }
+    }
+
+    .v-tab {
+        letter-spacing: .2px;
+        text-transform: none;
+    }
+
+    &:not(.l-tabs--chips) {
+        border-bottom: 1px solid map_get($grey, 'lighten-4');
+
+        .v-tab {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+}
+
+.v-application .v-tabs.l-tabs--chips {
+    .v-tabs-bar {
+        height: auto;
+        min-height: 32px;
+    }
+
+    .v-tab {
+        overflow: hidden;
+        height: 32px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        margin: 8px;
+        border: 1px solid;
+        border-radius: 16px;
+
+        &--active {
+            color: map_get($shades, 'white');
+        }
+    }
+
+    &.l-tabs--no-overflow {
+        .v-slide-group__content {
+            width: 100%;
+        }
+    }
+
+    &.theme--light {
+        .v-tab {
+            &:not(.v-tab--active) {
+                color: map_get($light-blue, 'lighten-2') !important;
+                border-color: map_get($light-blue, 'lighten-5');
+                background: map_get($light-blue, 'lighten-5');
+            }
+        }
+    }
+
+    &.theme--dark {
+        .v-tab {
+            &:not(.v-tab--active) {
+                color: map-get($shades, 'white');
+                border-color: map-get($shades, 'white');
+            }
+        }
+    }
+}
+
+.v-application {
+    @include theme('v-tabs.l-tabs--chips') using($material) {
+        .v-tab {
+            &--active {
+                border-color: map-deep-get($material, 'colors', 'primary');
+                background: map-deep-get($material, 'colors', 'primary');
+            }
+        }
+    }
+}

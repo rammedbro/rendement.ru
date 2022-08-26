@@ -1,0 +1,22 @@
+.v-application .v-btn {
+    box-shadow: none;
+
+    &:hover {
+        @include elevation(2);
+    }
+
+    &:active {
+        @include elevation(4);
+    }
+
+    &[role="button"] {
+        cursor: pointer;
+    }
+
+    &.l-btn--no-hover {
+        &:hover:before,
+        &:focus:before {
+            opacity: 0 !important;
+        }
+    }
+}

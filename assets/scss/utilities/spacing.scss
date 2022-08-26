@@ -1,0 +1,23 @@
+/* Spacing */
+@if ($utility-list-margin-enable) {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+            $map: (
+                m: margin,
+                mt: margin-top,
+                ml: margin-left,
+                mb: margin-bottom,
+                mr: margin-right,
+            );
+
+            @each $key, $prop in $map {
+                @each $size, $length in $spacers {
+                    .list-#{$key}#{$infix}-#{$size} > *:not(:last-child) {
+                        #{$prop}: $length !important;
+                    }
+                }
+            }
+        }
+    }
+}

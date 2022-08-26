@@ -1,0 +1,22 @@
+.v-application .v-picker.v-picker--date {
+    .v-date-picker-title__date {
+        font-size: 26px;
+    }
+
+    .v-date-picker-table {
+        height: auto;
+
+        th {
+            font-weight: 500;
+        }
+
+        .v-btn {
+            font-weight: 500;
+        }
+    }
+
+    .v-card__actions {
+        margin-top: 8px;
+        padding: 0;
+    }
+}

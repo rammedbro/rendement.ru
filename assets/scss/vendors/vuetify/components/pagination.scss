@@ -1,0 +1,58 @@
+.v-application .v-pagination.theme--light .v-pagination {
+    &__navigation,
+    &__item {
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__navigation {
+        margin: 0;
+
+        .v-icon {
+            font-size: 16px;
+            color: map-get($shades, 'black');
+        }
+    }
+
+    &__item {
+        font-size: 14px;
+        font-weight: map_get($font-weights, 'medium');
+        margin: 0 8px;
+    }
+
+    &__navigation:not(.v-pagination__navigation--disabled),
+    &__item:not(.v-pagination__item--active) {
+        &:hover {
+            border-color: rgba(map-get($shades, 'black'), .04);
+            background: rgba(map-get($shades, 'black'), .04);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &__navigation,
+        &__item {
+            width: 40px;
+            min-width: 40px;
+            height: 40px;
+        }
+
+        &__navigation {
+            .v-icon {
+                font-size: 24px;
+            }
+        }
+
+        &__item {
+            font-size: 16px;
+            margin: 0 6px;
+        }
+    }
+}

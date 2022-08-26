@@ -1,0 +1,15 @@
+.v-application .theme--light.v-data-table {
+    th {
+        color: map_get($shades, 'black') !important;
+    }
+
+    th:first-child,
+    td:first-child {
+        padding-left: 0;
+    }
+
+    th:last-child,
+    td:last-child {
+        padding-right: 0;
+    }
+}

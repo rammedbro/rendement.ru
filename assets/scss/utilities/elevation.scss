@@ -1,0 +1,7 @@
+@if ($utility-ds-elevation-enable) {
+    @each $opacity in map-keys($ds-shadow-key-umbra) {
+        .ds-elevation-#{$opacity} {
+            @include ds-elevation($opacity, true);
+        }
+    }
+}
